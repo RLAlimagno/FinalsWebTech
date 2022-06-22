@@ -8,7 +8,7 @@
     $edit_state = false;
 
     // initalized connection
-    $db_conn = mysqli_connect('localhost','root','','carrental');
+    $connections = mysqli_connect ("localhost", "root", "", "carrental") ;
 
     // inserting of data 
     if (isset($_POST['save'])){
@@ -20,11 +20,11 @@
         $aval=$_POST['aval'];
 
         $query ="INSERT INTO carregi (carno,Cartype,brand,Pcapacity,aval) VALUES ('$carno','$Cartype','$brand','$Pcapacity','$aval')";
-        mysqli_query($db_conn,$query);
+        mysqli_query($connections,$query);
         header('location: CarReg.php');
     }
     // get result
-    $result =mysqli_query($db_conn,"SELECT * FROM carregi ORDER BY id;");
+    $result =mysqli_query($connections,"SELECT * FROM carregi ORDER BY id;");
 
 
 
@@ -38,7 +38,7 @@
         $aval= $_POST['aval'];
         $id = $_POST['id'];
 
-        mysqli_query($db_conn, "UPDATE carregi SET carno='$carno', Cartype='$Cartype',brand='$brand',Pcapacity='$Pcapacity',aval='$aval' WHERE id = '$id' ");
+        mysqli_query($connections, "UPDATE carregi SET carno='$carno', Cartype='$Cartype',brand='$brand',Pcapacity='$Pcapacity',aval='$aval' WHERE id = '$id' ");
         header('location: CarReg.php');
     }
     // Delete Record 
@@ -46,7 +46,7 @@
     if(isset($_GET['delete'])){
       $id = $_GET['delete'];
        
-        mysqli_query($db_conn,"DELETE FROM basic_info WHERE id= $id");
+        mysqli_query($connections,"DELETE FROM basic_info WHERE id= $id");
         header('location: CarReg.php');       
 
 
