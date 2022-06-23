@@ -18,85 +18,77 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    <title>Vechicle List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Armenian&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
-<body>
-<form class= "container">    
- 
- <div class="col-5">
-    <form method= "post" action="bd_opt.php">
-    
-        <input type= "hidden" name="id" value= "<?php echo $id?>">  
-          <div class="mb-3">
-            <label for = "" class ="form-control">Car No.</label>
-            <input type= "text" name="carno" value= "<?php echo $carno?>">
+
+<body style="background: var(--bs-dark);">
+    <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark text-center" style="font-family: 'Noto Sans Armenian', sans-serif;padding: 9px 18px;">
+        <div class="container-fluid"><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="index.html" style="font-weight: bold;">Wheels.™</a>
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="rentform.html">Rent A Car</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carregi.php">Car Registration</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">View Records</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
+                </ul>
             </div>
-            <div class="mb-3">
-            <label class ="form-control">Car Type </label>
-            <input type= "text" name="Cartype"value= "<?php echo $Cartype?>">
-            </div>
-            <div class="mb-3">
-            <label class ="form-control">Brand </label>
-            <input type= "text" name="brand"value= "<?php echo $brand?>">
-            </div>
-            <div class="mb-3">
-            <label class ="form-control">Passenger Capacity </label>
-            <input type= "number" name="Pcapacity"value= "<?php echo $Pcapacity?>">
-            </div>
-            <div class="mb-3">
-            <label class ="form-control">Availablity</gender>
-            <select name="aval">  
-
-            <option name="aval" value="">Vechicle Status</option> 
-
-            <option name="aval" value="Vacant" >Vacant</option> 
-            <option name="aval" value="Occupied">Occupied</option>
-
-            </select>
-
-
+        </div>
+    </nav>
+    <div class="container">
+        <form style="color: var(--bs-body-bg);background: var(--bs-dark);padding: 87px;">
             <div>
+                <input class="form-control" type="hidden" name="id" value="<?php echo $id?>" />
+            </div>
+            <div>
+                <label class="form-label">Car Number:</label>
+                <input class="form-control" type="text" name="carno" value="<?php echo $carno?>" />
+            </div>
+            <div>
+                <label class="form-label">Car type:</label>
+                <input class="form-control" type="text" name="Cartype" value="<?php echo $Cartype?>" />
+            </div>
+            <div>
+                <label class="form-label">Brand:</label>
+                <input class="form-control" type="text" name="brand" value="<?php echo $brand?>" />
+            </div>
+            <div>
+                <label class="form-label">Passenger Capacity:</label>
+                <input class="form-control" type="text" name="Pcapacity" value="<?php echo $Pcapacity?>;" />
+            </div>
+            <div>
+                <label class="form-label">Availability:</label>
+                <select class="form-select">
+                    <optgroup label="Vehicle Status">
+                        <option value="Vacant">Vacant</option>
+                        <option value="Occupied">Occupied</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div> 
                 <?php if ($edit_state == false ):?>
-                <button type="submit" name = "save">Save</button>
+                    <button type="submit" name = "save">Save</button>
                 <?php else: ?>   
-                <button type="submit" name= "update" >Update</button>
+                    <button type="submit" name= "update" >Update</button>
                 <?php endif ?>
-            </div>    
-     </form>
-     
-</div> 
-     <br>
-     <br>
-     <br>
-    
-
-<div class="col-2">
-   
-        <table border = "1" cellpadding ="10">
-            <thead>
-                <tr>
-                    <th>I.D</th>
-                    <th>Car no.</th>
-                    <th>Cartype</th>
-                    <th>Brand</th>
-                    <th>P.capacity</th>
-                    <th>Availability</th>
-                    <th colspan ="2">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($row = mysqli_fetch_array($result)) { ?>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="table-responsive text-center" style="background: var(--bs-body-bg);">
+            <table class="table table-bordered">
+                <thead>
+                    <?php while ($row = mysqli_fetch_array($result)) { ?>
                     <tr>
                         <td><?php echo $row['id']?></td>
                         <td><?php echo $row['carno']?></td>
@@ -108,19 +100,10 @@
                         <td><a href="CarReg.php?delete=<?php echo $row['id'];?>">Delete</td>
 
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table> 
-                
-    
-        <table border = "1">
-            <thead>
-                <tr>
-                
-                </tr>
-            </thead>
-             <tbody>
-                <?php while ($row = mysqli_fetch_array($result)) { ?>
+                    <?php } ?>
+                </thead>
+                <tbody>
+                    <?php while ($row = mysqli_fetch_array($result)) { ?>
                     <tr>
                         <td><?php echo $row['id']?></td>
                         <td><?php echo $row['carno']?></td>
@@ -132,13 +115,11 @@
                         <td><a href="index.php?delete=<?php echo $row['id'];?>">Delete</td>
 
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table> 
-    
-
-</div>       
-</div>
-</form>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>
