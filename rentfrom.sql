@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2022 at 02:52 PM
+-- Generation Time: Jun 25, 2022 at 09:48 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `carrent`
+-- Database: `carrental`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE `rentfrom` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `number` int(12) NOT NULL,
+  `number` int(15) NOT NULL,
   `car` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -40,9 +40,10 @@ CREATE TABLE `rentfrom` (
 --
 
 INSERT INTO `rentfrom` (`id`, `name`, `address`, `number`, `car`) VALUES
-(1, 'testing Register', 'test', 995197788, 'Sudan'),
-(2, 'testing Register', 'test', 995197788, 'Sudan'),
-(3, 'chet Holmgren', 'USA', 78894455, 'Luxury');
+(1, 'testing Register', 'test', 1233456789, 'SUV'),
+(2, 'chet Holmgren', 'USA', 1233456789, 'Luxury'),
+(3, 'Alex Abrines', 'Spain', 995197777, 'SUV'),
+(4, 'Michael Jepson', 'Washington', 97788944, 'Sudan');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +63,7 @@ ALTER TABLE `rentfrom`
 -- AUTO_INCREMENT for table `rentfrom`
 --
 ALTER TABLE `rentfrom`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
