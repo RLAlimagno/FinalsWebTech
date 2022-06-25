@@ -12,12 +12,12 @@
 
     <tr>
 
-        <td width="16%"><b>Carno</td>
-        <td width="10%"><b>Car type</td>
-        <td width="16%"><b>Brand</td>
-        <td width="16%"><b>Passenger Capacity</td>
-        <td width="16%"><b>Availability</td>
-        <td width="16%"><b>Action</td>
+        <td width="16%"><b>Name</td>
+        <td width="10%"><b>address</td>
+        <td width="16%"><b>number</td>
+        <td width="16%"><b>Car</td>
+        
+        
     </tr>
 
 
@@ -40,17 +40,17 @@
 
 include("connections.php");
 
-$retireve_query = mysqli_query($connections,"SELECT * FROM carregi WHERE id=id ");
+$retireve_query = mysqli_query($connections,"SELECT * FROM rentfrom WHERE id=id ");
 
 while($row_users = mysqli_fetch_assoc($retireve_query)){
 
     $id = $row_users["id"];
 
-    $db_carno = $row_users["carno"];
-    $db_Cartype = $row_users["Cartype"];
-    $db_brand = $row_users["brand"];
-    $db_Pcapacity = $row_users["Pcapacity"];
-    $db_aval = $row_users["aval"];
+    $db_name = $row_users["name"];
+    $db_address = $row_users["address"];
+    $db_number = $row_users["number"];
+    $db_car = $row_users["car"];
+   
     
 
     $jScript = md5(rand(1,9));
@@ -70,34 +70,14 @@ while($row_users = mysqli_fetch_assoc($retireve_query)){
    echo "
 
    <tr>
-       <td>$db_carno</td>
+       <td>$db_name</td>
 
-       <td>$db_Cartype</td>
-       <td>$db_brand</td>
-       <td>$db_Pcapacity</td>
-       <td>$db_aval</td>
+       <td>$db_address</td>
+       <td>$db_number</td>
+       <td>$db_car</td>
 
 
-       <td>
-            <center>
-                <br>
-                <br>
-                
-                <a href='?jScript=$jScript && newScript=$newScript && getUpdate=$getUpdate && id=$id' class ='btn-update'>update</a>
-               &nbsp;
-   
-               <a href=' ?jScript=$jScript && newScript=$newScript && getDelete=$getDelete && id=$id' class ='btn-delete'>delete</a>
-                <br>
-                <br>   
-                
-            </center>
-       
-       
-       
-       
-       
-       
-       </td>
+    
 
 
     </tr>";
@@ -108,7 +88,7 @@ while($row_users = mysqli_fetch_assoc($retireve_query)){
     
         <tr>
 
-            <td colspan='6'> <hr></td>
+            <td colspan='5'> <hr></td>
 
         </tr>
     
