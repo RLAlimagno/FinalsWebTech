@@ -11,10 +11,6 @@
           $Pcapacity = $record['Pcapacity'];
           $aval= $record['aval'];
           $id = $record['id']; 
-        //  ONCE YOU CLICK THE EDIT YOU CAN SEE THE CORRESPONDING ID OF TH DATA NEAR THE  local host
-        //localhost/crud1/index.php?/edit=(corresponding ID) 
-        // yung isang code dito line 54 naka hidden (para di display yung  $id at the same time 
-        // ma declare na din kasi without it mag error sa id hindi mag eedit a yeet )
     }
 
 ?>
