@@ -1,4 +1,5 @@
-<?
+<?php include('insert.php')
+
 ?>
 
 <!DOCTYPE html>
@@ -11,27 +12,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
+
 <body style="background: url(&quot;assets/img/bgb1.png&quot;) center / cover no-repeat;height: 700px;padding: 0px;">
     <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark text-center" style="font-family: 'Noto Sans Armenian', sans-serif;padding: 9px 18px;">
         <div class="container-fluid">
-            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
-            </button><a class="navbar-brand" href="index.php" style="font-weight: bold;">Wheels.™</a>
+            </button>
+            <a class="navbar-brand" data-bss-hover-animate="pulse" href="index.php" style="font-weight: bold;">Wheels.™</a>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="rentform.php">Rent A Car</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">About Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="rentform.php">Rent A Car</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="carregi.php">Car Registration</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="ViewRecord.php">View Records</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="AboutPage.php">About Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container" style="padding: 112px;">
-        <form style="background: var(--bs-dark);">
+        <form method="post" action="insert.php" style="background: var(--bs-dark);">
             <div style="padding: 87px;margin: 6px;">
                 <h1 style="color: var(--bs-body-bg);font-family: 'Open Sans', sans-serif;text-align: center;">Rent Form</h1>
                 <div>
@@ -46,14 +47,14 @@
                 <div>
                     <select class="form-select" name="car" style="padding: 6px 36px 6px 8px;margin: 14px;">
                         <optgroup label="-Select A Vehicle-">
-                            <option value="" selected="">Sedan</option>
-                            <option value="">SUV</option>
-                            <option value="">Luxury</option>
+                            <option name="car" value="sedan" selected="">Sedan</option>
+                            <option name="car" value="SUV">SUV</option>
+                            <option name="car" value="Luxury">Luxury</option>
                         </optgroup>
                     </select>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-primary" type="button" style="background: var(--bs-gray);">Submit</button>
+                    <button class="btn btn-primary" type="button" name="submit" style="background: var(--bs-gray);">Submit</button>
                 </div>
             </div>
         </form>
