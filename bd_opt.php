@@ -21,7 +21,7 @@
         $Pcapacity = $_POST['Pcapacity'];
         $aval=$_POST['aval'];
 
-        $query ="INSERT INTO carregi (carno,Cartype,brand,Pcapacity,gender) VALUES ('$carno','$Carnotype','$brand','$Pcapacity','$aval')";
+        $query ="INSERT INTO carregi (carno,Cartype,brand,Pcapacity,aval) VALUES ('$carno','$Cartype','$brand','$Pcapacity','$aval')";
         mysqli_query($db_conn,$query);
         header('location: CarReg.php');
     }

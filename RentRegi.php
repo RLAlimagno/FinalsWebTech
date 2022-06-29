@@ -15,7 +15,7 @@
 <body style="background: url(&quot;assets/img/bgb1.png&quot;) center / cover no-repeat;height: 700px;padding: 0px;">
     <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark text-center" style="font-family: 'Noto Sans Armenian', sans-serif;padding: 9px 18px;">
         <div class="container-fluid">
-        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="RentRegi.php">Rent A Car</a></li>
-                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="carregi.php">Car Registration</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="CarReg.php">Car Registration</a></li>
                     <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="ViewRecord.php">View Records</a></li>
                     <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="AboutPage.php">About Us</a></li>
                 </ul>

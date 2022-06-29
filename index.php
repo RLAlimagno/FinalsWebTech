@@ -21,8 +21,8 @@
             <a class="navbar-brand" data-bss-hover-animate="pulse" href="index.php" style="font-weight: bold;">Wheels.™</a>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="rentform.php">Rent A Car</a></li>
-                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="carregi.php">Car Registration</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="RentRegi.php">Rent A Car</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="CarReg.php">Car Registration</a></li>
                     <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="ViewRecord.php">View Records</a></li>
                     <li class="nav-item"><a class="nav-link active" data-bss-hover-animate="pulse" href="AboutPage.php">About Us</a></li>
                 </ul>

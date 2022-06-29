@@ -7,35 +7,15 @@
 
 
 <center>
-    <table border="0" width = "80%">
-
-
-    <tr>
-
-        <td width="16%"><b>Name</td>
-        <td width="10%"><b>address</td>
-        <td width="16%"><b>number</td>
-        <td width="16%"><b>Car</td>
-        
-        
-    </tr>
-
-
-    <tr>
-        
-        <td colspan='6'> <hr> </td>
-
-    </tr>
-
-
-
-
-
-
-
-
-
-
+    <div class="container">
+        <div class="table-responsive text-center" style="background: var(--bs-body-bg);">
+            <table class="table table-bordered">
+        <tr>
+            <td width="16%"><b>Name</td>
+            <td width="10%"><b>address</td>
+            <td width="16%"><b>number</td>
+            <td width="16%"><b>Car</td>       
+        </tr>
 <?php
 
 include("connections.php");
@@ -50,8 +30,6 @@ while($row_users = mysqli_fetch_assoc($retireve_query)){
     $db_address = $row_users["address"];
     $db_number = $row_users["number"];
     $db_car = $row_users["car"];
-   
-    
 
     $jScript = md5(rand(1,9));
 
@@ -60,12 +38,6 @@ while($row_users = mysqli_fetch_assoc($retireve_query)){
     $getUpdate  = md5(rand(1,9));
 
     $getDelete =  md5(rand(1,9));
-
-
-
-
-
-
 
    echo "
 
@@ -76,32 +48,7 @@ while($row_users = mysqli_fetch_assoc($retireve_query)){
        <td>$db_number</td>
        <td>$db_car</td>
 
-
-    
-
-
     </tr>";
-
-
-
-    echo "
-    
-        <tr>
-
-            <td colspan='5'> <hr></td>
-
-        </tr>
-    
-    
-    
-    
-    
-    
-    ";
-
-    
-    
-
 }
 
 ?>
